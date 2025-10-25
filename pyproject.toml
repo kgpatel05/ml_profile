@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 name = "ml_profiler"
 version = "0.1.0"
 description = "Custom ML GPU and system profiler with NVML and framework integration."
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Krish Patel" }]
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.8"
