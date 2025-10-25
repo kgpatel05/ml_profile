@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ml_profiler"
+version = "0.1.0"
+description = "Custom ML GPU and system profiler with NVML and framework integration."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+
+# Keep hard deps light (torch is optional)
+dependencies = [
+"pynvml>=11.0.0; platform_system == 'Linux' or platform_system == 'Windows'",
+"psutil>=5.9.0"
+]
+
+
+[project.optional-dependencies]
+torch = [
+"torch>=1.13",
+"tensorboard>=2.9"
+]
+
+
+dashboard = [
+"prometheus-client>=0.16"
+]
+
+
+[project.scripts]
+ml-profiler = "ml_profiler.__main__:main"
